@@ -1,0 +1,13 @@
+# Rolling Back Migrations
+
+// to roll back the latest migration
+php artisan migrate:rollback
+
+// to roll back a limited number of migration
+(count by underneath)
+php artisan migrate:rollback --step=5
+
+// to automatically delete related values after delete record
+// in migration
+// Example
+$table->foreignId('country_id')->constrained()->cascadeOnDelete()
